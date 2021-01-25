@@ -1,17 +1,17 @@
 (function() {
   'use strict';
-  angular.module('BBAdminServices').config(["$logProvider", function($logProvider) {
-    'ngInject';
-    $logProvider.debugEnabled(true);
-  }]);
+  angular.module('BBAdminServices', ['BB', 'BBAdmin.Services', 'BBAdmin.Filters', 'BBAdmin.Controllers', 'trNgGrid', 'ui.calendar']);
+
+  angular.module('BBAdminServicesMockE2E', ['BBAdminServices', 'BBAdminMockE2E']);
 
 }).call(this);
 
 (function() {
   'use strict';
-  angular.module('BBAdminServices', ['BB', 'BBAdmin.Services', 'BBAdmin.Filters', 'BBAdmin.Controllers', 'trNgGrid', 'ui.calendar']);
-
-  angular.module('BBAdminServicesMockE2E', ['BBAdminServices', 'BBAdminMockE2E']);
+  angular.module('BBAdminServices').config(["$logProvider", function($logProvider) {
+    'ngInject';
+    $logProvider.debugEnabled(true);
+  }]);
 
 }).call(this);
 
